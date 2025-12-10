@@ -1,4 +1,3 @@
-// WeatherHeader.jsx
 import { Box, Container, Stack, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useTranslation } from "react-i18next";
@@ -122,7 +121,7 @@ export default function WeatherHeader({
             }}
           >
             <img
-              src={img}
+              // src={img}
               alt={Status || "weather"}
               style={{ width: 96, height: 96, objectFit: "contain" }}
             />
@@ -175,10 +174,9 @@ export default function WeatherHeader({
                   y2={p * h}
                   stroke="currentColor"
                   strokeDasharray="4 6"
-                  opacity="0.25"
+                  // opacity="0.25"
                 />
               ))}
-
               {points && (
                 <polyline
                   points={points}
@@ -188,7 +186,6 @@ export default function WeatherHeader({
                   opacity="0.9"
                 />
               )}
-
               {months.map((m, i) => {
                 const cx = pad + i * step;
                 const cy = pad + normY(m.avgTemp) * (h - 2 * pad);

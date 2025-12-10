@@ -12,11 +12,10 @@ import {
 
 export default function Dashboard() {
   const { t, i18n } = useTranslation();
-
   const [weather, setWeather] = useState(null);
+  const [city, setCity] = useState("Tehran");
   const [forecast, setForecast] = useState([]);
   const [monthlyData, setMonthlyData] = useState([]);
-  const [city, setCity] = useState("Tehran");
   const [clock, setClock] = useState({ day: "", date: "", hour: "" });
 
   useEffect(() => {
